@@ -1,0 +1,118 @@
+@charset "utf-8";
+/* リセット部分 */
+html,body,header,h1,h2,p,ul,li,footer{
+margin: 0;
+padding: 0;
+}
+ul{
+list-style: none;
+}
+a{
+text-decoration: none;
+}
+img{
+vertical-align: bottom;
+}
+
+/* 共通部分 */
+h1{
+font-family: serif;
+text-align: center;
+margin:30px 0;
+}
+.g-nav{
+width: 100%;
+height: 50px;
+background-color: #CB4042;
+margin-bottom: 40px;
+}
+.g-nav>ul{
+width: 960px;
+display: flex;/* 横に並べる */
+margin: 0 auto;
+}
+.g-nav li{
+width: 20%;/* 5等分 */
+}
+.g-nav a{
+display: block;/* aに指令を出せるように */
+color: #fff;
+text-align: center;
+line-height: 50px;
+border-left:1px solid #fff;/* 線の細さ・種類を必ず入れる */
+}
+.g-nav li:last-of-type>a{
+border-right:1px solid #fff;
+}
+.g-nav a:hover,.g-nav li.current>a{/* aに命令する */
+text-decoration: underline;
+text-decoration-thickness: 4px;/* 下線の幅 */
+text-underline-offset:4px;/* 文字と下線の余白 */
+text-decoration-color: rgb(55, 55, 55);/* 下線の色 */
+/* opacity: 0.8;半透明にする */
+}
+footer{
+width: 100%;/* %とpxの違いに注意 */
+height: 100px;
+background-color: #CB4042;
+}
+footer>p{
+text-align: center;
+line-height: 100px;/* footerのheightの中央揃え */
+color: #fff;
+}
+
+/* トップページの部分 */
+.main-visual{
+text-align: center;
+margin-bottom: 70px;
+}
+
+.main-copy{
+text-align: center;
+margin-bottom: 70px;
+}
+.main-copy>h2{
+margin-bottom: 10px;
+font-family: serif;
+}
+.main-copy>p{
+width: 700px;/* 何故ここでセンター合わせが外れるのか？ */
+margin: 0 auto;
+line-height: 2;
+font-family: serif;
+}
+
+/* 季節ページ部分 */
+.wrapper{
+width: 960px;
+margin: 0 auto 50px;
+display: flex;
+}
+.txt-box{
+padding: 0 50px;
+}
+.txt-box>h2,.txt-box>p{
+font-family: serif;
+margin-bottom: 20px;
+}
+
+/* 春ページ部分 */
+.spring>.g-nav,.spring>footer{
+background-color: #EB7A77;
+}
+
+/* 夏ページ部分 */
+.summer>.g-nav,.summer>footer{
+background-color: #5DAC81;
+}
+
+/* 秋ページ部分 */
+.fall>.g-nav,.fall>footer{
+background-color: #E98B2A;
+}
+
+/* 冬ページ部分 */
+.winter>.g-nav,.winter>footer{
+background-color: #577C8A;
+}
